@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: steelblue;
+}
+
+h1, h2 {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+form {
+  margin: auto;
+  margin-top: 20px;
+  padding-top: 10px;
+  width: 320px;
+  border-radius: 10px;
+  background-color: silver;
+  box-shadow: -5px 5px 10px black;
+}
+
+fieldset {
+  margin: 0px 10px;
+}
+
+.field-form {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.field-form label, .field-form input:not(label input) {
+  display: block;
+}
+
+.field-form input:not(label input) {
+  width: 100%;
+}
+
+form fieldset:nth-child(2) .field-form {
+  text-align: center;
+}
+
+.field-form  input[type='radio']:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.field-form  input[type='radio']:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(180, 124, 233);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.field-form select {
+  display: block;
+  margin: auto;
+  background-color: rgb(180, 124, 233);
+}
+
+.field-form textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+#form-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#form-buttons input[type="submit"], #form-buttons input[type="reset"] {
+  width: 80px;
+  height: 30px;
+  margin: 10px 0px;
+  background-color: rgb(180, 124, 233);
+}
+
+#form-buttons input[type="submit"]:hover, #form-buttons input[type="reset"]:hover {
+  background-color: purple;
+  color: white;
+}
+
+form fieldset:nth-child(1) input {
+  padding: 4px;
+}
+
+form fieldset:nth-child(4) textarea {
+  padding: 4px;
+}
