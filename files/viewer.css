@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: steelblue;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.fcontainer {
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+  background-color: silver;
+  box-shadow: -5px 5px 10px black;
+}
+
+.fcontainer fieldset {
+  padding: 20px;
+}
+
+.fcontainer fieldset:nth-child(1) p {
+  text-align: center;
+}
+
+.fcontainer fieldset:nth-child(2) {
+  margin-top: 10px;
+}
+
+.btn-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: purple;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  background-color: rgb(180, 124, 233);
+  color: black;
+}
