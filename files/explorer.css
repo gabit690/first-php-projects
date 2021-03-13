@@ -28,7 +28,13 @@ h1, h2 {
   text-align: center;
 }
 
-#explorer-container .btn-create {
+#fupload {
+  margin-top: 20px;
+  padding: 10px 0px;
+  border: 5px double black;
+}
+
+.btn-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,21 +42,29 @@ h1, h2 {
   height: 30px;
   margin: auto;
   margin-top: 20px;
-  padding: 20px;
   background-color: rgb(180, 124, 233);
   color: black;
   border-radius: 10px;
   text-decoration: none;
 }
 
-#explorer-container .btn-create:hover {
+.btn-form:hover {
   background-color: purple;
   color: white;
 }
 
+h3 {
+  text-align: center;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 20px auto;
+}
+
 .footer {
   position: absolute;
-  bottom: 10;
+  bottom: 0;
   width: 100%;
   text-align: center;
 }

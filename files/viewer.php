@@ -1,3 +1,10 @@
+<?php 
+
+  session_start();
+
+  echo 'Session init: ' . $_SESSION['timeInit'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +19,22 @@
     <div class="fcontainer">
         <fieldset>
             <legend>Name</legend>
-            <p class="fname">Nombre del archivo</p>
+            <p class="fname">
+                <?php echo $_GET['name'] . '.txt';?>
+            </p>
         </fieldset>
         <fieldset>
             <legend>Content</legend>
-            <p class="fcontent">Contenido del archivo.</p>
+            <p class="fcontent">
+                <?php
+                    $pathFile = './created/'.$_GET['name'].'.txt';
+                    $myfile = fopen($pathFile, "r");
+                    while(!feof($myfile)) {
+                        echo fgets($myfile) . "<br>";
+                    }
+                    fclose($myfile);
+                ?>
+            </p>
         </fieldset>
     </div>
     <a class="btn-back" href="./explorer.php">Back</a>

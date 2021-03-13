@@ -1,3 +1,13 @@
+<?php
+
+  session_start();
+
+  echo 'Session init: ' . $_SESSION['timeInit'];
+  
+  // session_unset();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
