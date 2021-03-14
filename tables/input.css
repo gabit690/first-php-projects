@@ -3,11 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+  
 body {
   background-color: steelblue;
 }
-
+  
 h1, h2 {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -15,23 +15,32 @@ h1, h2 {
   text-decoration: underline;
 }
 
-#explorer-container {
+form {
   margin: auto;
   padding: 20px;
-  width: 60%;
+  width: 500px;
   border-radius: 10px;
   background-color: silver;
   box-shadow: -5px 5px 10px black;
 }
 
-#explorer-container p {
+/* formulario estilos */
+
+label {
+  display: block;
   text-align: center;
 }
 
-#fupload {
+input {
+  display: block;
+  margin: auto;
+  width: 300px;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+label:not(label:first-child) {
   margin-top: 20px;
-  padding: 10px 0px;
-  border: 5px double black;
 }
 
 .btn-form {
@@ -47,17 +56,28 @@ h1, h2 {
   border-radius: 10px;
   text-decoration: none;
 }
-
+  
 .btn-form:hover {
   background-color: purple;
   color: white;
 }
 
-h3 {
-  text-align: center;
+.btn-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: purple;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
 }
-
-input[type="file"] {
-  display: block;
-  margin: 20px auto;
+  
+.btn-back:hover {
+  background-color: rgb(180, 124, 233);
+  color: black;
 }
