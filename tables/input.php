@@ -1,3 +1,34 @@
+<?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "mydb";
+
+  // Create connection
+  $connection = new mysqli($servername, $username, $password);
+
+  // Check connection
+  if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error) . "<br>";
+  } else {
+    echo "Connected successfully" . "<br>";
+  }
+  
+  $existsDB = $connection->query("SHOW DATABASES LIKE '".$dbname."';")->num_rows > 0;
+
+  if (!$existsDB) {
+    // Create database
+    if ($connection->query("CREATE DATABASE $dbname;") === TRUE) {
+      echo "Database created"."<br>";
+    } else {
+      echo "Error creating database: " . $connection->error . "<br>";
+    }
+  } 
+
+  $connection->close();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +48,7 @@
           type="text" 
           name="fgame" 
           value=""
+          required
         >
         <label for="fyear">Year: </label>
         <input
@@ -31,6 +63,7 @@
           type="text" 
           name="fconsole" 
           value=""
+          required
         >
         <label for="fcompany">Company: </label>
         <input

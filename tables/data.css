@@ -46,3 +46,23 @@ p {
   background-color: #B0B3D6;
 }
 
+.btn-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: purple;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  background-color: rgb(180, 124, 233);
+  color: black;
+}
+
